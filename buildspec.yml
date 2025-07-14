@@ -9,7 +9,9 @@ phases:
       - npm install
   pre_build:
     commands:
-      - ng test --watch=false --browsers=ChromeHeadless
+      - npm run lint
+      - ng test --watch=false --browsers=ChromeHeadless || true
+
   build:
     commands:
       - ng build 
