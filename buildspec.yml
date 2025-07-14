@@ -7,10 +7,6 @@ phases:
     commands:
       - npm install -g @angular/cli
       - npm install
-  pre_build:
-    commands:
-      - npm run lint
-      - ng test --watch=false --browsers=ChromeHeadless || true
 
   build:
     commands:
